@@ -8,15 +8,17 @@ from pairing import ate_pairing
 G1 = G1Generator()
 G2 = G2Generator()
 
-default_length=64
+default_length=16
 
 def trusted_setup(length=default_length):
     s = rand_int(n)
     s_powers = [s**i%n for i in range(length)]
     return [j*G1 for j in s_powers], s*G2
 
+# how we encode the data in the polynomial is currently very basic
+# but not really important in the context of the actual proof scheme
 def encode_as_polynomial(data, length=default_length):
-    chunk_size=31 # max bytes that safely map to prime order group (n)
+    chunk_size=31 # simple way to get chunks that safely map to GF(n)
     data = __format_data(data, length*chunk_size)
     points = [(i,int(hexlify(data[i*chunk_size:(i+1)*chunk_size]).decode(), 16)) for i in range(length)]
     polynomial = lagrange_polynomial(points)
