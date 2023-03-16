@@ -1,0 +1,5 @@
+galois==0.3.3
+llvmlite==0.39.1
+numba==0.56.4
+numpy==1.23.5
+typing_extensions==4.5.0
