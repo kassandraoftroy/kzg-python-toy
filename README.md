@@ -2,7 +2,7 @@
 
 This repo is intended to be a very simple and readable toy implementation of the actual KZG commitment and proof scheme over the bls12-381 elliptic curve pairing in python.
 
-More specifically this takes the explanations from [here](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html) and tries to make a real world implementation of the "single" kate proof (multiproofs is future work I hope to add here!)
+More specifically this takes the explanations from [here](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html) and tries to make a real world implementation of a kate proof for the evalutation of a single point on P(x) (multiproofs is future work I hope to add here!)
 
 # quick overview
 
