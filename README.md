@@ -8,7 +8,9 @@ More specifically this is an exercise to take the explanations from [here](https
 
 python 3+
 
-if you want to use alternate more scalable `lagrange_polynomial` method (see comments in `polynomial.py`) that relies on the galois package, then install one external dependency:
+In it's current form this repo has no dependencies. 
+
+If you want to use the alternate, more scalable `lagrange_polynomial` method (see comments in `polynomial.py`) for lagrange interpolation, then this relies on the `galois` package. Install this one (optional) external dependency with:
 
 ```
 pip install galois
