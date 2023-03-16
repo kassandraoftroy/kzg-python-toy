@@ -15,8 +15,8 @@ if __name__=='__main__':
 
     # choose some point on P(x) to prove
     point = (1, evaluate_polynomial(poly,1))
-    print(points)
-    print(point)
+    assert points[1][0] == point[0], "xs should be equal"
+    assert points[1][1] == point[1], "ys should be equal"
 
     # create kzg proof
     pi = kzg.proof(poly, point, setup_g1)

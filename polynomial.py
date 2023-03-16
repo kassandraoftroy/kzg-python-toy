@@ -1,7 +1,7 @@
 from bls12381 import n
 from galois import GF, lagrange_poly
 
-print("...please wait a minute while we load GF(n)...")
+print("...please wait a minute to compute lookup tables for GF(n)...")
 default_f=GF(n,1,verify=False)
 
 # returns polynomial encoded as an array of coefficients in ascending order
